@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Vite App</title>
+</head>
+
+<body class="min-h-screen flex flex-col">
+	<div class="container mx-auto px-4 py-5 drop-shadow-md">
+		<div class="px-4 flex justify-between items-center">
+			<a class="inline-block border-2 border-black rounded-full" href="javascript:;">
+				<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd"
+						d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+						clip-rule="evenodd">
+					</path>
+				</svg>
+			</a>
+			<h1 class="text-2xl font-semibold">Do'kon sozlamalari</h1>
+			<div class="w-8 border-2 border-transparent"></div>
+		</div>
+	</div>
+	<div class="container mx-auto px-4">
+		<img src="../assets/temp/store-banner.png" class="w-full" alt="">
+	</div>
+	<div class="container mx-auto px-4 flex justify-between py-5 items-center">
+		<div class="flex">
+			<img src="../assets/temp/store-logo.png" class="h-16" alt="">
+			<div class="ml-3">
+				<h1 class="text-4xl font-bold">Mi Store </h1>
+				<p class="text-lg">
+					<span class="text-gray-600 font-medium">Obunachilar:</span>
+					<span class="font-bold">12,300 ta</span>
+				</p>
+			</div>
+		</div>
+		<a href="/edit.html"
+			class="bg-black text-white hover:bg-black/80 transition-colors duration-200 px-5 py-3 rounded-lg text-lg">
+			Malumotlarni o'zgartirish
+		</a>
+	</div>
+	<div class="
+		container 
+		mx-auto 
+		mb-5
+		px-4" x-data="{
+			activeTab: window.location.hash || '#analytics',
+		}" x-init="$watch('activeTab', value => window.location = value);">
+		<div class="flex justify-center gap-6">
+			<button class="
+				hover:text-black/80
+				transition duration-200
+				px-4 py-1 
+				font-bold 
+				text-2xl
+				relative 
+				before:transition-all
+				before:duration-200
+				before:absolute 
+				before:h-1 
+				before:rounded-full 
+				before:bottom-0
+				before:inset-x-4" :class="{
+					'before:bg-red-500 text-black': activeTab == '#analytics',
+					'before:bg-transparent text-black/60': activeTab != '#analytics',
+				}" @click="activeTab = '#analytics'">
+				Do'kon ko'rsatkichlari
+			</button>
+			<button class="
+				hover:text-black/80
+				transition duration-200
+				px-4 py-1 
+				font-bold 
+				text-2xl
+				relative 
+				before:transition-all
+				before:duration-200
+				before:absolute 
+				before:h-1 
+				before:rounded-full 
+				before:bottom-0
+				before:inset-x-4" :class="{
+					'before:bg-red-500 text-black': activeTab == '#products',
+					'before:bg-transparent text-black/60': activeTab != '#products',
+				}" @click="activeTab = '#products'">
+				Mahsulotlar
+			</button>
+		</div>
+		<div class="grid md:grid-cols-2 gap-4 mt-10" x-show="activeTab == '#analytics'">
+			<div class="bg-gray-50 rounded-lg p-3.5">
+				<h5 class="font-bold mb-2 px-1.5 text-2xl">
+					Ko'p ko'rilgan mahsulotlar
+				</h5>
+				<table class="w-full">
+					<thead>
+						<tr class="border-b border-b-gray-200 font-medium text-gray-500">
+							<td class="text-left py-2.5 px-1.5">Nomi</td>
+							<td class="text-right py-2.5 px-1.5">Soni</td>
+						</tr>
+					</thead>
+					<tbody class="text-xl">
+						<tr onclick="this.querySelector('a')?.click()"
+							class="border-b border-dashed border-b-gray-200 last:border-b-transparent hover:bg-gray-200 cursor-pointer">
+							<th class="text-left py-2.5 px-1.5">
+								<a href="/asd">
+									Smart watch HW 56 plus
+
+								</a>
+							</th>
+							<td class="text-right py-2.5 px-1.5 text-gray-600 font-medium">
+								60k
+							</td>
+						</tr>
+						<tr onclick="this.querySelector('a')?.click()"
+							class="border-b border-dashed border-b-gray-200 last:border-b-transparent hover:bg-gray-200 cursor-pointer">
+							<th class="text-left py-2.5 px-1.5">
+								<a href="/asda">
+									Smart watch HW 56 plus
+								</a>
+							</th>
+							<td class="text-right py-2.5 px-1.5 text-gray-600 font-medium">
+								60k
+							</td>
+						</tr>
+						<tr onclick="this.querySelector('a')?.click()"
+							class="border-b border-dashed border-b-gray-200 last:border-b-transparent hover:bg-gray-200 cursor-pointer">
+							<th class="text-left py-2.5 px-1.5">
+								<a href="/asd2">
+									Smart watch HW 56 plus
+								</a>
+							</th>
+							<td class="text-right py-2.5 px-1.5 text-gray-600 font-medium">
+								60k
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="bg-gray-50 rounded-lg p-3.5">
+				<h5 class="font-bold mb-2 px-1.5 text-2xl">
+					Ko'p ko'rilgan mahsulotlar
+				</h5>
+				<table class="w-full">
+					<thead>
+						<tr class="border-b border-b-gray-200 font-medium text-gray-500">
+							<td class="text-left py-2.5 px-1.5">Nomi</td>
+							<td class="text-right py-2.5 px-1.5">Soni</td>
+						</tr>
+					</thead>
+					<tbody class="text-xl">
+						<tr onclick="this.querySelector('a')?.click()"
+							class="border-b border-dashed border-b-gray-200 last:border-b-transparent hover:bg-gray-200 cursor-pointer">
+							<th class="text-left py-2.5 px-1.5">
+								<a href="/asd">
+									Smart watch HW 56 plus
+
+								</a>
+							</th>
+							<td class="text-right py-2.5 px-1.5 text-gray-600 font-medium">
+								60k
+							</td>
+						</tr>
+						<tr onclick="this.querySelector('a')?.click()"
+							class="border-b border-dashed border-b-gray-200 last:border-b-transparent hover:bg-gray-200 cursor-pointer">
+							<th class="text-left py-2.5 px-1.5">
+								<a href="/asda">
+									Smart watch HW 56 plus
+								</a>
+							</th>
+							<td class="text-right py-2.5 px-1.5 text-gray-600 font-medium">
+								60k
+							</td>
+						</tr>
+						<tr onclick="this.querySelector('a')?.click()"
+							class="border-b border-dashed border-b-gray-200 last:border-b-transparent hover:bg-gray-200 cursor-pointer">
+							<th class="text-left py-2.5 px-1.5">
+								<a href="/asd2">
+									Smart watch HW 56 plus
+								</a>
+							</th>
+							<td class="text-right py-2.5 px-1.5 text-gray-600 font-medium">
+								60k
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="grid grid-cols-4 gap-4" x-show="activeTab == '#products'">
+			<a href="" class="bg-gray-100 rounded-2xl p-2.5 block">
+				<img src="../assets/temp/product1.png" alt="" class="w-full object-contain rounded-xl">
+				<div class="p-1.5 py-2.5">
+					<h2 class="font-semibold text-xl">Smart Watch Hw 56Plus</h2>
+					<span class="text-gray-800 font-medium">409 ta sotildi</span>
+					<p class="font-bold text-2xl"> 319,000 so'm</p>
+				</div>
+			</a>
+		</div>
+	</div>
+
+
+	<div class="bg-black mt-auto">
+		<div class="container mx-auto px-4 flex flex-wrap gap-x-12 gap-y-4 py-8">
+			<a href="" class="text-2xl text-white hover:text-opacity-80 hover:underline transition-all duration-200">
+				Mening kabinetim
+			</a>
+			<a href="" class="text-2xl text-white hover:text-opacity-80 hover:underline transition-all duration-200">
+				Biz haqimizda
+			</a>
+			<a href="" class="text-2xl text-white hover:text-opacity-80 hover:underline transition-all duration-200">
+				Aloqa uchun
+			</a>
+			<a href="" class="text-2xl text-white hover:text-opacity-80 hover:underline transition-all duration-200">
+				Ommaviy oferta
+			</a>
+			<a href="" class="text-2xl text-white hover:text-opacity-80 hover:underline transition-all duration-200">
+				Mening sevimlilarim
+			</a>
+		</div>
+	</div>
+	<script type="module" src="/main.js"></script>
+</body>
+
+</html>
