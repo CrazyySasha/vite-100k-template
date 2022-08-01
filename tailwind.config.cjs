@@ -652,6 +652,7 @@ module.exports = {
       0: '0px',
       full: '100%',
       screen: '100vh',
+      variable: 'calc(var(--vh, 1vh) * 100)',
       min: 'min-content',
       max: 'max-content',
       fit: 'fit-content',

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merchant Edit</title>
+    <meta name="description"
+        content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi vitae recusandae repudiandae totam iure unde molestias iste eaque tempora iusto veritatis consequuntur perspiciatis mollitia, quo corrupti optio numquam! Blanditiis!">
+</head>
+
+<body class="min-h-variable flex flex-col transition-all duration-200" x-data="{
+	update() {
+		const vh = this.height = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	},
+	init() {
+		this.update()
+	},
+}" @resize.window="update()">
+    <header class="sticky top-0 z-50 bg-white shadow shadow-primary/10">
+        <div class="container mx-auto px-2 sm:px-4 py-2 flex items-center justify-between gap-2 md:gap-10">
+            <div>
+                <a class="block" href="/">
+                    <img src="../assets/img/100k.png" alt="100k.uz" class="h-6 sm:h-8">
+                </a>
+            </div>
+            <div class="flex justify-center">
+                <ul class="
+						mx-auto
+						bg-white shadow-lg sm:shadow-none shadow-primary
+						fixed sm:static bottom-0 inset-x-0 z-50 
+						p-1 sm:p-0 w-full grid grid-cols-5 sm:gap-5 md:gap-10">
+                    <li>
+                        <a class="flex flex-col gap-0.5 items-center p-1 text-xs text-primary hover:text-primary transition-all duration-200 "
+                            href="/admin">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z"
+                                    clip-rule="evenodd">
+                                </path>
+                                <path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"></path>
+                            </svg>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex flex-col gap-0.5 items-center p-1 text-xs text-gray-700 hover:text-primary transition-all duration-200"
+                            href="/admin/market">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+                                    clip-rule="evenodd">
+                                </path>
+                            </svg>
+                            Market
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex flex-col gap-0.5 items-center p-1 text-xs text-gray-700 hover:text-primary transition-all duration-200"
+                            href="/admin/streams">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+                                    clip-rule="evenodd">
+                                </path>
+                            </svg>
+                            Oqim
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex flex-col gap-0.5 items-center p-1 text-xs text-gray-700 hover:text-primary transition-all duration-200"
+                            href="/admin/statistics">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd">
+                                </path>
+                            </svg>
+                            Statistika
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex flex-col gap-0.5 items-center p-1 text-xs text-gray-700 hover:text-primary transition-all duration-200"
+                            href="/admin/withdraw">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                                    clip-rule="evenodd">
+                                </path>
+                            </svg>
+                            To'lov
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div x-data="{isOpen: false}" class="relative" @click.outside="isOpen = false">
+                <a href="javascript:;" @click="isOpen = !isOpen"
+                    class="text-gray-700 hover:text-primary flex items-center transition-all duration-200 font-medium">
+                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                            clip-rule="evenodd">
+                        </path>
+                    </svg>
+                </a>
+                <ul class="absolute bg-white right-0 rounded-lg border drop-shadow overflow-clip top-[calc(100%+.25rem)]"
+                    x-show="isOpen" x-transition x-cloak>
+                    <li>
+                        <a class="px-4 py-1 block whitespace-nowrap hover:bg-black/5 transition-all duration-200 hover:text-primary"
+                            href="/profile">
+                            Profil
+                        </a>
+                    </li>
+                    <li>
+                        <a class="px-4 py-1 block whitespace-nowrap hover:bg-black/5 transition-all duration-200 hover:text-primary"
+                            href="/admin">
+                            Adminlar uchun
+                        </a>
+                    </li>
+                    <li>
+                        <a class="px-4 py-1 block whitespace-nowrap hover:bg-black/5 transition-all duration-200 hover:text-primary"
+                            href="/shop/favorite">
+                            Mening sevimlilarim
+                        </a>
+                    </li>
+                    <li>
+                        <a class="px-4 py-1 block whitespace-nowrap hover:bg-black/5 transition-all duration-200 hover:text-primary"
+                            href="/profile/settings">
+                            Sozlamalar
+                        </a>
+                    </li>
+                    <li>
+                        <a class="px-4 py-1 block whitespace-nowrap hover:bg-black/5 transition-all duration-200 hover:text-primary"
+                            href="/exit">
+                            Chiqish
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="container mx-auto px-4 py-3 sm:py-5 shadow-sm">
+            <div class="flex justify-between items-center">
+                <a class="inline-block border-2 border-black rounded-full" href="javascript:history.back();">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                            clip-rule="evenodd">
+                        </path>
+                    </svg>
+                </a>
+                <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold">Do'kon sozlamalari</h1>
+                <div class="w-6 border-2 border-transparent"></div>
+            </div>
+        </div>
+        <div class="container mx-auto shadow-sm relative" x-data="{cover: null}">
+            <div class="h-96 bg-gray-100">
+                <img x-ref="bannerCover" class="w-full max-h-96" alt="">
+            </div>
+            <label
+                class="absolute inset-0 hover:text-primary cursor-pointer flex flex-col justify-center items-center gap-2.5 group transition-all duration-200 bg-white/40"
+                tabindex="0" @keypress.enter.space.prevent.stop="$refs.bannerField.click()">
+                <svg class="w-16 h-16" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70"
+                    fill="none">
+                    <path stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                        d="M26.2533 29.1667C29.4749 29.1667 32.0866 26.555 32.0866 23.3333C32.0866 20.1117 29.4749 17.5 26.2533 17.5C23.0316 17.5 20.4199 20.1117 20.4199 23.3333C20.4199 26.555 23.0316 29.1667 26.2533 29.1667Z" />
+                    <path stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                        d="M37.9134 5.83252H26.2467C11.6634 5.83252 5.83008 11.6659 5.83008 26.2492V43.7492C5.83008 58.3325 11.6634 64.1659 26.2467 64.1659H43.7468C58.3301 64.1659 64.1634 58.3325 64.1634 43.7492V29.1659" />
+                    <path stroke="currentColor" stroke-width="4" stroke-linecap="round" d="M45.9375 14.5825H61.9792" />
+                    <path stroke="currentColor" stroke-width="4" stroke-linecap="round" d="M53.9551 22.6042V6.5625" />
+                    <path stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                        d="M7.78711 55.2728L22.1663 45.6186C24.4704 44.0728 27.7954 44.2478 29.8663 46.0269L30.8288 46.8728C33.1038 48.8269 36.7788 48.8269 39.0538 46.8728L51.1871 36.4603C53.4621 34.5061 57.1371 34.5061 59.4121 36.4603L64.1663 40.5436" />
+                </svg>
+                <h2 class="text-2xl font-semibold" x-show="!!!cover" x-transition>
+                    Do'kon sarlavhasi uchun rasm yuklash
+                </h2>
+                <input type="file" hidden name="banner" placeholder="Rasm yuklash" x-ref="bannerField" x-model="cover"
+                    @change="reader = new FileReader(); reader.readAsDataURL(event.target.files[0]); reader.onload = () => $refs.bannerCover.setAttribute('src', reader.result);">
+                <p class="font-medium text-gray-600 text-xl group-hover:text-primary transition-all duration-200">
+                    Rasm o'lchami:
+                    <span class="font-bold">
+                        1180x310
+                    </span>
+                </p>
+                <div
+                    class="px-7 py-2 bg-black text-white rounded-lg inline-flex group-hover:bg-primary transition-all duration-200 font-semibold text-lg shadow-md">
+                    Rasm yuklash
+                </div>
+            </label>
+        </div>
+
+        <div class="container mx-auto px-4 flex flex-col gap-2 sm:flex-row justify-between py-5 items-stretch"
+            x-data="{logo: null}">
+            <label class="flex items-center cursor-pointer group">
+                <div
+                    class="w-12 sm:w-16 lg:w-24 h-12 sm:h-16 lg:h-24 bg-gray-100 rounded-full overflow-hidden relative">
+                    <img x-show="!!logo" class="w-12 sm:w-16 lg:w-24 h-12 sm:h-16 lg:h-24 rounded-full">
+                    <svg class="w-14 h-14 absolute inset-0 m-auto group-hover:text-primary transition-all duration-200" xmlns="http://www.w3.org/2000/svg"
+                        width="70" height="70" viewBox="0 0 70 70" fill="none">
+                        <path stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                            d="M26.2533 29.1667C29.4749 29.1667 32.0866 26.555 32.0866 23.3333C32.0866 20.1117 29.4749 17.5 26.2533 17.5C23.0316 17.5 20.4199 20.1117 20.4199 23.3333C20.4199 26.555 23.0316 29.1667 26.2533 29.1667Z" />
+                        <path stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                            d="M37.9134 5.83252H26.2467C11.6634 5.83252 5.83008 11.6659 5.83008 26.2492V43.7492C5.83008 58.3325 11.6634 64.1659 26.2467 64.1659H43.7468C58.3301 64.1659 64.1634 58.3325 64.1634 43.7492V29.1659" />
+                        <path stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                            d="M45.9375 14.5825H61.9792" />
+                        <path stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                            d="M53.9551 22.6042V6.5625" />
+                        <path stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                            d="M7.78711 55.2728L22.1663 45.6186C24.4704 44.0728 27.7954 44.2478 29.8663 46.0269L30.8288 46.8728C33.1038 48.8269 36.7788 48.8269 39.0538 46.8728L51.1871 36.4603C53.4621 34.5061 57.1371 34.5061 59.4121 36.4603L64.1663 40.5436" />
+                    </svg>
+                </div>
+                <div class="ml-3 flex gap-2 items-center">
+                    <input type="file" x-model="logo" hidden>
+                    <div
+                        class="px-7 py-2 bg-black text-white rounded-lg inline-flex group-hover:bg-primary transition-all duration-200 font-semibold text-lg shadow-md">
+                        Rasm yuklash
+                    </div>
+                    <p class="text-lg font-medium"> Rasmning maksimal o'lchami: <span class="font-semibold">5MB</span> </p>
+                </div>
+            </label>
+
+        </div>
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold mb-4">Malumotlarni o'zgartirish</h3>
+            <div class="w-1/2 flex flex-col gap-2 mb-4">
+                <label for="" class="text-xl font-semibold px-1">
+                    Do'kon nomi
+                </label>
+                
+                <input type="text" class="border-2 border-gray-200 rounded-xl px-4 py-1.5 focus:outline-none focus:border-primary focus:shadow-lg focus:shadow-primary/20 transition-colors duration-200 min-w-[16rem] text-xl" placeholder="Do'kon nomini kiriting">
+            </div>
+            <div class="w-full flex flex-col gap-2 mb-4">
+                <label for="" class="text-xl font-semibold px-1">
+                    Do'kon haqida ma'lumot
+                </label>
+                
+                <textarea type="text" class="border-2 border-gray-200 rounded-xl px-4 py-1.5 focus:outline-none focus:border-primary focus:shadow-lg focus:shadow-primary/20 transition-colors duration-200 min-w-[16rem] text-xl" placeholder="Do'kon ma'lumotlarini kiriting"></textarea>
+            </div>
+            
+            <div class="mb-4">
+                <button class="w-full sm:w-auto bg-black text-white hover:bg-primary transition-colors duration-200 px-7 py-2 rounded-lg text-base lg:text-lg font-semibold inline-flex gap-2 justify-center">Tasdiqlash</button>
+            </div>
+            
+        </div>
+    </main>
+    <footer class="bg-black mb-12 sm:mb-0">
+        <div
+            class="container mx-auto px-2 sm:px-4 flex flex-col items-start gap-y-2 gap-x-8 py-4 md:py-8  md:flex-row md:flex-wrap md:justify-between">
+            <a href="/profile" class="text-lg sm:text-xl text-white hover:text-primary transition-all duration-200">
+                Mening kabinetim
+            </a>
+            <a href="/pages/about" class="text-lg sm:text-xl text-white hover:text-primary transition-all duration-200">
+                Biz haqimizda
+            </a>
+            <a href="/pages/contacts"
+                class="text-lg sm:text-xl text-white hover:text-primary transition-all duration-200">
+                Aloqa uchun
+            </a>
+            <a href="/pages/privacy-policy"
+                class="text-lg sm:text-xl text-white hover:text-primary transition-all duration-200">
+                Ommaviy oferta
+            </a>
+            <a href="/shop/favorite"
+                class="text-lg sm:text-xl text-white hover:text-primary transition-all duration-200">
+                Mening sevimlilarim
+            </a>
+        </div>
+        <div class="container mx-auto px-2 sm:px-4 text-white flex justify-between py-2 text-sm sm:text-base">
+            <span>
+                2016-2021 - 100K.UZ
+            </span>
+            <span>
+                Barcha huquqlar himoyalangan
+            </span>
+        </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>

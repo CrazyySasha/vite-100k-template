@@ -2,25 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-.scrollbar::-webkit-scrollbar {
+@layer base {
+    [x-cloak] {
+        @apply hidden;
+    }
 
-    @apply w-1.5 h-1.5;
+    .scrollbar::-webkit-scrollbar {
+        @apply w-1.5 h-1.5;
+    }
 
+    /* Track */
+    .scrollbar::-webkit-scrollbar-track {
+        @apply bg-transparent rounded-full;
+    }
 
-}
+    /* Handle */
+    .scrollbar::-webkit-scrollbar-thumb {
+        @apply bg-primary/80 transition-all duration-200 rounded-full w-1;
+    }
 
-/* Track */
-.scrollbar::-webkit-scrollbar-track {
-    
-    @apply bg-transparent rounded-full; 
-}
-
-/* Handle */
-.scrollbar::-webkit-scrollbar-thumb {
-    @apply bg-primary/80 transition-all duration-200 rounded-full w-1;
-}
-
-/* Handle on hover */
-.scrollbar::-webkit-scrollbar-thumb:hover {
-    @apply bg-primary;
+    /* Handle on hover */
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+        @apply bg-primary;
+    }
 }

@@ -7,6 +7,7 @@ export default defineConfig({
             input: {
                 'auth': resolve(__dirname, './pages/auth.html'),
                 'merchant': resolve(__dirname, './pages/merchant.html'),
+                'merchant-edit': resolve(__dirname, './pages/merchant-edit.html'),
             },
         },
     },
