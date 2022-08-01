@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Merchant</title>
+	<meta name="description"
+		content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi vitae recusandae repudiandae totam iure unde molestias iste eaque tempora iusto veritatis consequuntur perspiciatis mollitia, quo corrupti optio numquam! Blanditiis!">
+  <script type="module" crossorigin src="/assets/main.1ab22af8.js"></script>
+  <link rel="stylesheet" href="/assets/main.f8e6da35.css">
+</head>
+
+<body class="min-h-variable flex flex-col transition-all duration-200" x-data="{
+	update() {
+		const vh = this.height = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	},
+	init() {
+		this.update()
+	},
+}" @resize.window="update()">
+	<header class="sticky top-0 z-50 bg-white shadow shadow-primary/10">
+		<div class="container mx-auto px-2 sm:px-4 py-2 flex items-center justify-between gap-2 md:gap-10">
+			<div>
+				<a class="block" href="/">
+					<img src="/assets/100k.0e3b9295.png" alt="100k.uz" class="h-6 sm:h-8">
+				</a>
+			</div>
+			<div class="flex justify-center">
+				<ul class="
+						mx-auto
+						bg-white shadow-lg sm:shadow-none shadow-primary
+						fixed sm:static bottom-0 inset-x-0 z-50 
+						p-1 sm:p-0 w-full grid grid-cols-5 sm:gap-5 md:gap-10">
+					<li>
+						<a class="flex flex-col gap-0.5 items-center p-1 text-xs text-primary hover:text-primary transition-all duration-200 "
+							href="/admin">
+							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd"
+									d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z"
+									clip-rule="evenodd">
+								</path>
+								<path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"></path>
+							</svg>
+							Dashboard
+						</a>
+					</li>
+					<li>
+						<a class="flex flex-col gap-0.5 items-center p-1 text-xs text-gray-700 hover:text-primary transition-all duration-200"
+							href="/admin/market">
+							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd"
+									d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+									clip-rule="evenodd">
+								</path>
+							</svg>
+							Market
+						</a>
+					</li>
+					<li>
+						<a class="flex flex-col gap-0.5 items-center p-1 text-xs text-gray-700 hover:text-primary transition-all duration-200"
+							href="/admin/streams">
+							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd"
+									d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+									clip-rule="evenodd">
+								</path>
+							</svg>
+							Oqim
+						</a>
+					</li>
+					<li>
+						<a class="flex flex-col gap-0.5 items-center p-1 text-xs text-gray-700 hover:text-primary transition-all duration-200"
+							href="/admin/statistics">
+							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd"
+									d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z"
+									clip-rule="evenodd">
+								</path>
+							</svg>
+							Statistika
+						</a>
+					</li>
+					<li>
+						<a class="flex flex-col gap-0.5 items-center p-1 text-xs text-gray-700 hover:text-primary transition-all duration-200"
+							href="/admin/withdraw">
+							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd"
+									d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+									clip-rule="evenodd">
+								</path>
+							</svg>
+							To'lov
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div x-data="{isOpen: false}" class="relative" @click.outside="isOpen = false">
+				<a href="javascript:;" @click="isOpen = !isOpen"
+					class="text-gray-700 hover:text-primary flex items-center transition-all duration-200 font-medium">
+					<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd"
+							d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+							clip-rule="evenodd">
+						</path>
+					</svg>
+				</a>
+				<ul class="absolute bg-white right-0 rounded-lg border drop-shadow overflow-clip top-[calc(100%+.25rem)]"
+					x-show="isOpen" x-transition x-cloak>
+					<li>
+						<a class="px-4 py-1 block whitespace-nowrap hover:bg-black/5 transition-all duration-200 hover:text-primary"
+							href="/profile">
+							Profil
+						</a>
+					</li>
+					<li>
+						<a class="px-4 py-1 block whitespace-nowrap hover:bg-black/5 transition-all duration-200 hover:text-primary"
+							href="/admin">
+							Adminlar uchun
+						</a>
+					</li>
+					<li>
+						<a class="px-4 py-1 block whitespace-nowrap hover:bg-black/5 transition-all duration-200 hover:text-primary"
+							href="/shop/favorite">
+							Mening sevimlilarim
+						</a>
+					</li>
+					<li>
+						<a class="px-4 py-1 block whitespace-nowrap hover:bg-black/5 transition-all duration-200 hover:text-primary"
+							href="/profile/settings">
+							Sozlamalar
+						</a>
+					</li>
+					<li>
+						<a class="px-4 py-1 block whitespace-nowrap hover:bg-black/5 transition-all duration-200 hover:text-primary"
+							href="/exit">
+							Chiqish
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</header>
+	<main>
+		<div class="container mx-auto px-4 py-3 sm:py-5 shadow-sm">
+			<div class="flex justify-between items-center">
+				<a class="inline-block border-2 border-black rounded-full" href="javascript:history.back();">
+					<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd"
+							d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+							clip-rule="evenodd">
+						</path>
+					</svg>
+				</a>
+				<h1 class="text-lg sm:text-xl lg:text-2xl font-semibold">Do'kon sozlamalari</h1>
+				<div class="w-6 border-2 border-transparent"></div>
+			</div>
+		</div>
+		<div class="container mx-auto shadow-sm">
+			<img src="/assets/store-banner.7c4399b3.png" class="w-full max-h-96" alt="">
+		</div>
+
+		<div class="container mx-auto px-4 flex flex-col gap-2 sm:flex-row justify-between py-5 items-stretch">
+			<div class="flex items-center">
+				<img src="data:image/png;base64,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" class="w-12 sm:w-16 lg:w-24 h-12 sm:h-16 lg:h-24"
+					alt="Mi Store">
+				<div class="ml-3">
+					<h1 class="text-xl sm:text-2xl lg:text-4xl font-bold"> Mi Store </h1>
+					<p class="text-sm sm:text-base lg:text-lg">
+						<span class="text-gray-700 font-medium">Obunachilar:</span>
+						<span class="font-bold">12,300 ta</span>
+					</p>
+				</div>
+			</div>
+			<div class="flex items-center">
+				<a href="/pages/merchant-edit.html"
+					class="w-full sm:w-auto bg-black text-white hover:bg-primary transition-colors duration-200 px-5 py-2 rounded-lg text-base lg:text-lg font-semibold inline-flex gap-2 justify-center">
+					<svg class="w-6 h-6 lg:w-7 lg:h-7" fill="currentColor" viewBox="0 0 20 20"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z">
+						</path>
+					</svg>
+					<span>
+						Malumotlarni o'zgartirish
+					</span>
+				</a>
+			</div>
+		</div>
+		<div class="
+			container 
+			mx-auto 
+			mb-5
+			px-4" x-data="{
+				activeTab: window.location.hash || '#analytics',
+			}" x-init="$watch('activeTab', value => window.location = value);">
+			<div class="flex justify-center gap-6">
+				<button class="
+					hover:text-black/80
+					transition duration-200
+					px-4 py-1 
+					font-bold 
+					text-base sm:text-lg lg:text-2xl
+					relative 
+					before:transition-all
+					before:duration-200
+					before:absolute 
+					before:h-1 
+					before:rounded-full 
+					before:bottom-0
+					before:inset-x-4" :class="{
+						'before:bg-red-500 text-black': activeTab == '#analytics',
+						'before:bg-transparent text-black/60': activeTab != '#analytics',
+					}" @click="activeTab = '#analytics'">
+					Do'kon ko'rsatkichlari
+				</button>
+				<button class="
+					hover:text-black/80
+					transition duration-200
+					px-4 py-1 
+					font-bold 
+					text-base sm:text-lg lg:text-2xl
+					relative 
+					before:transition-all
+					before:duration-200
+					before:absolute 
+					before:h-1 
+					before:rounded-full 
+					before:bottom-0
+					before:inset-x-4" :class="{
+						'before:bg-red-500 text-black': activeTab == '#products',
+						'before:bg-transparent text-black/60': activeTab != '#products',
+					}" @click="activeTab = '#products'">
+					Mahsulotlar
+				</button>
+			</div>
+			<div class="grid md:grid-cols-2 gap-4 mt-10" x-show="activeTab == '#analytics'">
+				<div class="bg-gray-50 rounded-lg p-3.5">
+					<h5 class="font-bold mb-2 px-1.5 text-xl lg:text-2xl">
+						Ko'p ko'rilgan mahsulotlar
+					</h5>
+					<table class="w-full">
+						<thead class="text-sm lg:text-base">
+							<tr class="border-b border-b-gray-200 font-medium text-gray-500">
+								<td class="text-left py-2.5 px-1.5">Nomi</td>
+								<td class="text-right py-2.5 px-1.5">Soni</td>
+							</tr>
+						</thead>
+						<tbody class="text-sm sm:text-lg lg:text-xl">
+							<tr onclick="this.querySelector('a')?.click()"
+								class="border-b border-dashed border-b-gray-200 last:border-b-transparent hover:bg-gray-200 cursor-pointer hover:text-primary">
+								<th class="text-left py-2.5 px-1.5">
+									<a href="/asd">
+										Smart watch HW 56 plus
+
+									</a>
+								</th>
+								<td class="text-right py-2.5 px-1.5 text-gray-700 font-medium">
+									60k
+								</td>
+							</tr>
+							<tr onclick="this.querySelector('a')?.click()"
+								class="border-b border-dashed border-b-gray-200 last:border-b-transparent hover:bg-gray-200 cursor-pointer hover:text-primary">
+								<th class="text-left py-2.5 px-1.5">
+									<a href="/asda">
+										Smart watch HW 56 plus
+									</a>
+								</th>
+								<td class="text-right py-2.5 px-1.5 text-gray-700 font-medium">
+									60k
+								</td>
+							</tr>
+							<tr onclick="this.querySelector('a')?.click()"
+								class="border-b border-dashed border-b-gray-200 last:border-b-transparent hover:bg-gray-200 cursor-pointer hover:text-primary">
+								<th class="text-left py-2.5 px-1.5">
+									<a href="/asd2">
+										Smart watch HW 56 plus
+									</a>
+								</th>
+								<td class="text-right py-2.5 px-1.5 text-gray-700 font-medium">
+									60k
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="bg-gray-50 rounded-lg p-3.5">
+					<h5 class="font-bold mb-2 px-1.5 text-xl lg:text-2xl">
+						Ko'p ko'rilgan mahsulotlar
+					</h5>
+					<table class="w-full">
+						<thead class="text-sm lg:text-base">
+							<tr class="border-b border-b-gray-200 font-medium text-gray-500">
+								<td class="text-left py-2.5 px-1.5">Nomi</td>
+								<td class="text-right py-2.5 px-1.5">Soni</td>
+							</tr>
+						</thead>
+						<tbody class="text-sm sm:text-lg lg:text-xl">
+							<tr onclick="this.querySelector('a')?.click()"
+								class="border-b border-dashed border-b-gray-200 last:border-b-transparent hover:bg-gray-200 cursor-pointer hover:text-primary">
+								<th class="text-left py-2.5 px-1.5">
+									<a href="/asd">
+										Smart watch HW 56 plus
+
+									</a>
+								</th>
+								<td class="text-right py-2.5 px-1.5 text-gray-700 font-medium">
+									60k
+								</td>
+							</tr>
+							<tr onclick="this.querySelector('a')?.click()"
+								class="border-b border-dashed border-b-gray-200 last:border-b-transparent hover:bg-gray-200 cursor-pointer hover:text-primary">
+								<th class="text-left py-2.5 px-1.5">
+									<a href="/asda">
+										Smart watch HW 56 plus
+									</a>
+								</th>
+								<td class="text-right py-2.5 px-1.5 text-gray-700 font-medium">
+									60k
+								</td>
+							</tr>
+							<tr onclick="this.querySelector('a')?.click()"
+								class="border-b border-dashed border-b-gray-200 last:border-b-transparent hover:bg-gray-200 cursor-pointer hover:text-primary">
+								<th class="text-left py-2.5 px-1.5">
+									<a href="/asd2">
+										Smart watch HW 56 plus
+									</a>
+								</th>
+								<td class="text-right py-2.5 px-1.5 text-gray-700 font-medium">
+									60k
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" x-show="activeTab == '#products'">
+				<a href="/zxc"
+					class="bg-gray-50 shadow-md hover:shadow-primary/10 hover:shadow-lg transition-all duration-200 rounded-2xl p-2 sm:p-2.5 block group relative">
+					<img src="/assets/product1.24e4ac0f.png" alt="" class="w-full object-contain rounded-2xl">
+					<div class="py-2">
+						<h2
+							class="font-semibold text-sm sm:text-xl group-hover:text-primary transition-all duration-200">
+							Smart Watch Hw 56Plus</h2>
+						<span
+							class="text-gray-800 font-medium text-xs sm:text-base group-hover:text-gray-900 transition-all duration-200">409
+							ta sotildi</span>
+						<p class="font-bold text-lg sm:text-xl lg:text-2xl my-1"> 319,000 so'm </p>
+					</div>
+					<button
+						class="rounded-full absolute right-1.5 top-1.5 bg-white p-2 hover:bg-primary hover:text-white text-primary hover:shadow-md hover:shadow-primary/10 transition-all duration-200"
+						@click.prevent>
+						<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd"
+								d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+								clip-rule="evenodd">
+							</path>
+						</svg>
+					</button>
+				</a>
+
+				<a href="/zxc"
+					class="bg-gray-50 shadow-md hover:shadow-primary/10 hover:shadow-lg transition-all duration-200 rounded-2xl p-2 sm:p-2.5 block group relative">
+					<img src="/assets/product1.24e4ac0f.png" alt="" class="w-full object-contain rounded-2xl">
+					<div class="py-2">
+						<h2
+							class="font-semibold text-sm sm:text-xl group-hover:text-primary transition-all duration-200">
+							Smart Watch Hw 56Plus</h2>
+						<span
+							class="text-gray-800 font-medium text-xs sm:text-base group-hover:text-gray-900 transition-all duration-200">409
+							ta sotildi</span>
+						<p class="font-bold text-lg sm:text-xl lg:text-2xl my-1"> 319,000 so'm </p>
+					</div>
+					<button
+						class="rounded-full absolute right-1.5 top-1.5 bg-white p-2 hover:bg-primary hover:text-white text-primary hover:shadow-md hover:shadow-primary/10 transition-all duration-200"
+						@click.prevent>
+						<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd"
+								d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+								clip-rule="evenodd">
+							</path>
+						</svg>
+					</button>
+				</a>
+				<a href="/zxc"
+					class="bg-gray-50 shadow-md hover:shadow-primary/10 hover:shadow-lg transition-all duration-200 rounded-2xl p-2 sm:p-2.5 block group relative">
+					<img src="/assets/product1.24e4ac0f.png" alt="" class="w-full object-contain rounded-2xl">
+					<div class="py-2">
+						<h2
+							class="font-semibold text-sm sm:text-xl group-hover:text-primary transition-all duration-200">
+							Smart Watch Hw 56Plus</h2>
+						<span
+							class="text-gray-800 font-medium text-xs sm:text-base group-hover:text-gray-900 transition-all duration-200">409
+							ta sotildi</span>
+						<p class="font-bold text-lg sm:text-xl lg:text-2xl my-1"> 319,000 so'm </p>
+					</div>
+					<button
+						class="rounded-full absolute right-1.5 top-1.5 bg-white p-2 hover:bg-primary hover:text-white text-primary hover:shadow-md hover:shadow-primary/10 transition-all duration-200"
+						@click.prevent>
+						<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd"
+								d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+								clip-rule="evenodd">
+							</path>
+						</svg>
+					</button>
+				</a>
+				<a href="/zxc"
+					class="bg-gray-50 shadow-md hover:shadow-primary/10 hover:shadow-lg transition-all duration-200 rounded-2xl p-2 sm:p-2.5 block group relative">
+					<img src="/assets/product1.24e4ac0f.png" alt="" class="w-full object-contain rounded-2xl">
+					<div class="py-2">
+						<h2
+							class="font-semibold text-sm sm:text-xl group-hover:text-primary transition-all duration-200">
+							Smart Watch Hw 56Plus</h2>
+						<span
+							class="text-gray-800 font-medium text-xs sm:text-base group-hover:text-gray-900 transition-all duration-200">409
+							ta sotildi</span>
+						<p class="font-bold text-lg sm:text-xl lg:text-2xl my-1"> 319,000 so'm </p>
+					</div>
+					<button
+						class="rounded-full absolute right-1.5 top-1.5 bg-white p-2 hover:bg-primary hover:text-white text-primary hover:shadow-md hover:shadow-primary/10 transition-all duration-200"
+						@click.prevent>
+						<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd"
+								d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+								clip-rule="evenodd">
+							</path>
+						</svg>
+					</button>
+				</a>
+				<a href="/zxc"
+					class="bg-gray-50 shadow-md hover:shadow-primary/10 hover:shadow-lg transition-all duration-200 rounded-2xl p-2 sm:p-2.5 block group relative">
+					<img src="/assets/product1.24e4ac0f.png" alt="" class="w-full object-contain rounded-2xl">
+					<div class="py-2">
+						<h2
+							class="font-semibold text-sm sm:text-xl group-hover:text-primary transition-all duration-200">
+							Smart Watch Hw 56Plus</h2>
+						<span
+							class="text-gray-800 font-medium text-xs sm:text-base group-hover:text-gray-900 transition-all duration-200">
+							409 ta sotildi
+						</span>
+						<p class="font-bold text-lg sm:text-xl lg:text-2xl my-1"> 319,000 so'm </p>
+					</div>
+					<button
+						class="rounded-full absolute right-1.5 top-1.5 bg-white p-2 hover:bg-primary hover:text-white text-primary hover:shadow-md hover:shadow-primary/10 transition-all duration-200"
+						@click.prevent>
+						<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd"
+								d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+								clip-rule="evenodd">
+							</path>
+						</svg>
+					</button>
+				</a>
+			</div>
+		</div>
+	</main>
+	<footer class="bg-black mb-12 sm:mb-0">
+		<div
+			class="container mx-auto px-2 sm:px-4 flex flex-col items-start gap-y-2 gap-x-8 py-4 md:py-8  md:flex-row md:flex-wrap md:justify-between">
+			<a href="/profile" class="text-lg sm:text-xl text-white hover:text-primary transition-all duration-200">
+				Mening kabinetim
+			</a>
+			<a href="/pages/about" class="text-lg sm:text-xl text-white hover:text-primary transition-all duration-200">
+				Biz haqimizda
+			</a>
+			<a href="/pages/contacts"
+				class="text-lg sm:text-xl text-white hover:text-primary transition-all duration-200">
+				Aloqa uchun
+			</a>
+			<a href="/pages/privacy-policy"
+				class="text-lg sm:text-xl text-white hover:text-primary transition-all duration-200">
+				Ommaviy oferta
+			</a>
+			<a href="/shop/favorite"
+				class="text-lg sm:text-xl text-white hover:text-primary transition-all duration-200">
+				Mening sevimlilarim
+			</a>
+		</div>
+		<div class="container mx-auto px-2 sm:px-4 text-white flex justify-between py-2 text-sm sm:text-base">
+			<span>
+				2016-2021 - 100K.UZ
+			</span>
+			<span>
+				Barcha huquqlar himoyalangan
+			</span>
+		</div>
+	</footer>
+	
+</body>
+
+</html>
